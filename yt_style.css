@@ -1,0 +1,126 @@
+/* --- BASIC RESET --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f6f6f6;
+    color: #111;
+}
+
+/* --- HEADER --- */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 12px 16px;
+    border-bottom: 1px solid #ddd;
+}
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+.search {
+    flex: 1;
+    max-width: 540px;
+    margin: 0 16px;
+}
+.search input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.icons {
+    font-size: 20px;
+    display: flex;
+    gap: 12px;
+    cursor: pointer;
+}
+
+/* --- MAIN LAYOUT --- */
+.wrap {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 200px;
+    background: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+.menu-item {
+    padding: 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+.menu-item:hover {
+    background: #f0f0f0;
+}
+hr {
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid #eee;
+}
+
+/* --- MAIN CONTENT --- */
+.main {
+    flex: 1;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
+}
+.card {
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: scale(1.02);
+}
+.thumb {
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+}
+.meta {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    align-items: flex-start;
+}
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #bbb;
+    flex-shrink: 0;
+}
+.text {
+    flex: 1;
+}
+.text small {
+    color: #666;
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 700px) {
+    .wrap {
+        flex-direction: column;
+    }
+    .sidebar {
+        display: none;
+    }
+}
